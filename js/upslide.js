@@ -1,5 +1,5 @@
 window.onload = function(){
-    var slideCon = ('.slide_con');
+    var slideCon = $('.slide_con');
     var slideTimer;
     var delayTime = 1500;
     slideTimer = setInterval(changeSlide, delayTime);
