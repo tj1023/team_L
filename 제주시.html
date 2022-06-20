@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/intro.css" type="text/css" rel="stylesheet">
+    <title>제주시 소개</title>
+    <script>
+        var bimg
+        var count = 0
+        function img_click(img) {   //이미지 클릭시 크게 띄움
+            bimg = document.createElement("img")
+            bimg.src = img.src
+            bimg.style = "display: inline-block; width: 40%; padding-top: 20px"
+            var span = document.getElementById("bimg")
+            if (count == 0) {var child = span.childNodes[1]}
+            else {var child = span.childNodes[2]}
+            span.removeChild(child)
+            span.appendChild(bimg)
+            count++
+            var p = document.getElementById("info")     //장소별 소개
+            if (img.id == "1") {
+                p.innerHTML = "<strong>비행기 포토존</strong><br><a class=none href=http://naver.me/5rsMbZLN target=_blank>주소 : 제주시 도공로 86-1</a><br>공항이 있는 제주시의 포토존이다. 카페 그라나다를 검색하여 찾아갈 수 있으며 비행기가 코앞에 있는듯한 사진을 찍을 수 있어서 유명하다."
+            }
+            if (img.id == "2") {
+                p.innerHTML = "<strong>동문시장</strong><br><a class=none href=http://naver.me/GsTOlAn2 target=_blank>주소 : 제주시 관덕로14길 20</a><br>동문재래시장은 제주도 도심에 자리하였으며, 가장 크고 역사가 깊은 상설 재래시장이다. 엄청난 규모를 자랑하는 만큼 1년 내내 현지인 그리고 여행객들의 발걸음이 끊이지 않는 곳이다."
+            }
+            if (img.id == "3") {
+                p.innerHTML = "<strong>용연</strong><br><a class=none href=http://naver.me/xcKJXCi5 target=_blank>주소 : 제주시 흥운길 73</a><br>용연은 계곡과 바다 사이를 이어주는 호수로 구름다리와 용연정 등 다양한 볼거리들이 있어 여행중 산책을 즐기기에 안성맞춤인 곳이다."
+            }
+            if (img.id == "4") {
+                p.innerHTML = "<strong>그때그집</strong><br><a class=none href=http://naver.me/GVAWWhMq target=_blank>주소 : 제주시 서해안로 352-1</a><br>그때그집은 제주공항 근처의 바닷가에 위치해 있으며 제주도의 대표적인 음식인 흑돼지 구이를 먹을 수 있는 맛집이다."
+            }
+        }
+        function f(){
+            var foot = document.getElementById("nofoot")
+            foot.setAttribute("id", "foot")
+        }
+    </script>
+</head>
+
+<body onload="f()">
+    <ul>
+        <li><a class="active" href="team.html">
+                <img src="media/로고.jpg" height="75px" width="75px"></a></li>
+        <li><a href="team.html">제주의 풍경</a></li>
+        <li><a href="team.html#textBox">제주지도</a></li>
+        <li><a href="team.html#festa">축제와 행사</a></li>
+    </ul>
+    <span id="bimg">
+        <img src="media/제주시/포토존.png">
+    </span>
+    <table align="right">
+        <tr>
+            <td colspan="2" style="vertical-align:top; font-size: 3em;">
+                <strong>제주시</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><img id="1" src="media/제주시/포토존.png" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="1" src="media/제주시/포토존2.png" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="2" src="media/제주시/동문시장.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="2" src="media/제주시/동문시장2.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="3" src="media/제주시/용연.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="3" src="media/제주시/용연2.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="4" src="media/제주시/그때그집.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="4" src="media/제주시/그때그집2.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+    </table>
+    <p id="info">
+        <strong>비행기 포토존</strong><br><a class=none href=http://naver.me/5rsMbZLN target=_blank>주소 : 제주시 도공로 86-1</a><br>공항이 있는 제주시의 포토존이다. 카페 그라나다를 검색하여 찾아갈 수 있으며 비행기가 코앞에 있는듯한 사진을 찍을 수 있어서 유명하다.
+    </p>
+    <span id="no"></span>
+    <div style="height: 40px;"></div>
+    <div id="nofoot">
+        <p style="text-align: center;"><b>사진 출처</b></p>
+        <div>
+            <a href="https://m.facebook.com/400408423449830/posts/1845026065654718/">[비행기포토존] https://m.facebook.com/400408423449830/posts/1845026065654718/</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://m.blog.naver.com/ijoataiji/220883517632">[동문시장1] https://m.blog.naver.com/ijoataiji/220883517632</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://cobaltbluewings.tistory.com/234">[동문시장2] https://cobaltbluewings.tistory.com/234</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://m.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500472">[용연1] https://m.visitjeju.net/kr/detail/view?contentsid=CONT_0000000005004724</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://blog.daum.net/kheenn/15856678">[용연2] https://blog.daum.net/kheenn/15856678</a><br>
+            <a href="http://www.newsfreezone.co.kr/news/articleView.html?idxno=214263">[그때그집1] http://www.newsfreezone.co.kr/news/articleView.html?idxno=214263</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.diningcode.com/profile.php?rid=fgpkWJM0kzVD">[그때그집2] https://www.diningcode.com/profile.php?rid=fgpkWJM0kzVD</a><br><br>
+        </div>
+    </div>
+</body>
+
+</html>

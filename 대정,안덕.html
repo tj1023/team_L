@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>대정읍 안덕면 소개</title>
+    <link href="css/intro.css" type="text/css" rel="stylesheet">
+    <script>
+        var bimg
+        var count = 0
+        function img_click(img) {   //이미지 클릭시 크게 띄움
+            bimg = document.createElement("img")
+            bimg.src = img.src
+            bimg.style = "display: inline-block; width: 40%; padding-top: 20px"
+            var span = document.getElementById("bimg")
+            if (count == 0) { var child = span.childNodes[1] }
+            else { var child = span.childNodes[2] }
+            span.removeChild(child)
+            span.appendChild(bimg)
+            count++
+            var p = document.getElementById("info")     //장소별 소개
+            if (img.id == "1") {
+                p.innerHTML = "<strong>제주 곶자왈 도립공원</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/GROzg2xq target=_blank> 주소 : 제주 서귀포시 대정읍 에듀시티로 178</a><br>"
+                p.innerHTML += "제주의 대표 자연자원인 곶자왈(암괴들이 불규칙하게 널려있는 지대에 형성된 숲)의 생태적 <br>안정성을 확보하여 자연휴양공간 제공, 체험·학습 기능을 제공"
+            } if (img.id == "2") {
+                p.innerHTML = "<strong>송악산</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/Fn2i9wLL target=_blank>주소 : 제주 서귀포시 대정읍 송악관광로 421-1</a><br>산방산의 남쪽, 가파도가 손에 잡힐 듯 보이는 바닷가에 불끈 솟은 산<br>산이라는 이름이 붙어있지만 나즈막한 높이로 가볍게 산책하기 좋은 장소"
+            } if (img.id == "3") {
+                p.innerHTML = "<strong>초콜릿박물관</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/GgeuyHzT target=_blank>주소 : 제주 서귀포시 대정읍 일주서로3000번길 144 초콜릿박물관</a><br>세계 두 번째의 규모로 동양에서는 처음으로 세워진 초콜릿&카카오 전문 박물관. <br>초콜릿 관련 영화 관람, 고대 초콜릿 제조 기구, 모형, 진귀한 초콜릿, 각국의 초콜릿 패키지 등 관련전시품과 신선한 수제품 초콜릿 구매 가능"
+            } if (img.id == "4") {
+                p.innerHTML = "<strong>노리매</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/GVAWD4yL target=_blank>주소 : 제주 서귀포시 대정읍 중산간서로 2260-15</a><br>자연 속에서 현대적 감성을 즐길 수 있는 공간으로 매화가 있는 도시형 공원.<br>사계절이 머무는 자연 속에서 여유롭게 산책할 수 있다."
+            } if (img.id == "5") {
+                p.innerHTML = "<strong>오셜록 티 뮤지엄</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/GbEcxO4s target=_blank>주소 : 제주 서귀포시 안덕면 신화역사로 15 오설록</a><br>세계적인 디자인 건축 전문사이트인 디자인붐이 선정한 세계 10대 미술관에 오를 만큼 안팎으로 아름다운 풍광으로 연간 150만 명의 관람객이 방문하는 제주 최고 명소"
+            } if (img.id == "6") {
+                p.innerHTML = "<strong>플레이네이쳐</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/xFpoJbnE target=_blank>주소 : 제주 서귀포시 안덕면 일주서로 1836</a><br>낮에는 플레이네이쳐, 밤에는 포레스트판타지아로 야경 미디어테마파크로 운영.<br>아름다운 조명의 조형물과 조각들과 모닥불체험이 있다."
+            } if (img.id == "7") {
+                p.innerHTML = "<strong>제주 마린파크</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/5RctVGCs target=_blank>주소 : 제주 서귀포시 안덕면 화순중앙로 132</a><br>국내 유일의 해양동물 구조 및 치료기관, 서식지 외 보전기관, 돌고래 체험관으로서 단순히 <br>보여주는 곳이 아닌 돌고래와 사람이 같은 공간 안에서 숨쉬어 볼 수 있는 체험장"
+            } if (img.id == "8") {
+                p.innerHTML = "<strong>용머리해안</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/GmFVV11C target=_blank>주소 : 제주 서귀포시 안덕면 사계리 112-3</a><br>산방산 해안에 있으며, 바닷속으로 들어가는 용의 머리를 닮았다 하여 붙여진 이름<br>겉으로 보면 평범하지만 좁은 통로를 따라 바닷가로 내려가면 수천 만 년 동안 층층이 쌓인 <br>사암층 암벽이 나온다. "
+            } if (img.id == "9") {
+                p.innerHTML = "<strong>트로이 테마농원</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/FhAdJ32k target=_blank>주소 : 제주 서귀포시 안덕면 녹차분재로 56</a><br>감귤체험과 승마체험을 할 수 있는 장소"
+            } if (img.id == "10") {
+                p.innerHTML = "<strong>소인국 테마파크</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/5MUCQPTG target=_blank>주소 : 제주 서귀포시 안덕면 중산간서로 1878</a><br>2만여평의 부지에 30여개국 100여점의 유명 건축물 미니어처와 제주도의 돌문화, 민속신앙, 공룡화석 등을 갖춘 복합문화공간으로 국내 최대의 미니어처 테마파크"
+            }
+        }
+        function f() {
+            var foot = document.getElementById("nofoot")
+            foot.setAttribute("id", "foot")
+        }
+    </script>
+</head>
+
+<body onload="f()">
+    <ul>
+        <li><a class="active" href="team.html">
+                <img src="media/로고.jpg" height="75px" width="75px"></a></li>
+        <li><a href="team.html">제주의 풍경</a></li>
+        <li><a href="team.html#textBox">제주지도</a></li>
+        <li><a href="team.html#festa">축제와 행사</a></li>
+    </ul>
+    <span id="bimg">
+        <img src="media/대정안덕/제주곶자왈도립공원.jpeg">
+    </span>
+    <table align="right">
+        <tr>
+            <td colspan="2" style="vertical-align:top; font-size: 2.5em;">
+                <strong>대정읍</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><img id="1" src="media/대정안덕/제주곶자왈도립공원.jpeg" alt="제주곶자왈도립공원" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="2" src="media/대정안덕/송악산.jpeg" alt="송악산" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="3" src="media/대정안덕/초콜릿박물관.jpeg" alt="초콜릿박물관" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="4" src="media/대정안덕/노리매.jpeg" alt="노리매" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="vertical-align:top; font-size: 2.5em;">
+                <strong>안덕면</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><img id="5" src="media/대정안덕/오셜록.jpeg" alt="오셜록" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="6" src="media/대정안덕/플레이네이쳐.jpeg" alt="플레이네이쳐" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="7" src="media/대정안덕/제주마린파크.jpeg" alt="제주마린파크" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="8" src="media/대정안덕/용머리해안.jpeg" alt="용머리해안" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="9" src="media/대정안덕/트로이테마농업.jpeg" alt="트로이테마농업" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="10" src="media/대정안덕/소인국테마파크.jpg" alt="소인국테마파크" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+    </table>
+    <p id="info">
+        <strong>제주 곶자왈 도립공원</strong><br><a class=none href=http://naver.me/GROzg2xq target=_blank> 주소 : 제주 서귀포시 대정읍
+            에듀시티로 178</a><br>제주의 대표 자연자원인 곶자왈(암괴들이 불규칙하게 널려있는 지대에 형성된 숲)의 생태적 <br>안정성을 확보하여 자연휴양공간 제공, 체험·학습 기능을 제공
+    </p>
+    <span id="no"></span>
+    <div style="height: 40px;"></div>
+    <div id="nofoot">
+        <p style="text-align: center;"><b>사진 출처</b></p>
+        <div>
+            <a href="https://map.naver.com/v5/entry/place/36992417?c=14049003.2097916,3934089.6907959,12,0,0,0,dh">[제주곶자왈도립공원]
+                https://map.naver.com/v5/entry/place/36992417?c=14049003.2097916,3934089.6907959,12,0,0,0,dh</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500378">[송악산]
+                https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500378</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="http://norimae.alltheway.kr/">[노리매] http://norimae.alltheway.kr/</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://map.naver.com/v5/entry/place/32165845?c=14048128.8285872,3929923.8870760,12,0,0,0,dh">[초콜릿박물관]
+                https://map.naver.com/v5/entry/place/32165845?c=14048128.8285872,3929923.8870760,12,0,0,0,dh</a><br>
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500457">[오셜록]
+                https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500457</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://map.naver.com/v5/entry/place/1903421012?c=14060763.9915424,3929930.3970187,13,0,0,0,dh">[플레이네이쳐]
+                https://map.naver.com/v5/entry/place/1903421012?c=14060763.9915424,3929930.3970187,13,0,0,0,dh</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://map.naver.com/v5/entry/place/37687797?c=14060611.1164857,3929959.0727604,13,0,0,0,dh">[제주마린파크]
+                https://map.naver.com/v5/entry/place/37687797?c=14060611.1164857,3929959.0727604,13,0,0,0,dh</a><br>
+            <a href="https://map.naver.com/v5/entry/place/13491455?c=14060611.1164857,3929959.0727604,13,0,0,0,dh">[용머리해안]
+                https://map.naver.com/v5/entry/place/13491455?c=14060611.1164857,3929959.0727604,13,0,0,0,dh</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://map.naver.com/v5/entry/place/36321099?c=14058023.1386999,3933969.8069727,13,0,0,0,dh">[트로이테마농원]
+                https://map.naver.com/v5/entry/place/36321099?c=14058023.1386999,3933969.8069727,13,0,0,0,dh</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500372">[소인국테마파크]
+                https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500372</a>
+
+        </div>
+    </div>
+</body>
+
+</html>

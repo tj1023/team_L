@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/intro.css" type="text/css" rel="stylesheet">
+    <title>구좌읍 소개</title>
+    <script>
+        var bimg
+        var count = 0
+        function img_click(img) {   //이미지 클릭시 크게 띄움
+            bimg = document.createElement("img")
+            bimg.src = img.src
+            bimg.style = "display: inline-block; width: 40%; padding-top: 20px"
+            var span = document.getElementById("bimg")
+            if (count == 0) { var child = span.childNodes[1] }
+            else { var child = span.childNodes[2] }
+            span.removeChild(child)
+            span.appendChild(bimg)
+            count++
+            var p = document.getElementById("info")     //장소별 소개
+            if (img.id == "1") {
+                p.innerHTML = "<strong>김녕미로공원</strong><br><a class=none href=http://naver.me/5xlnleY8 target=_blank>주소 : 제주시 구좌읍 만장굴길 122</a><br>김녕미로공원은 사계절 푸르름을 유지하는 상록수 랠란디가 수벽을 이루고 있는 우리나라 최초의 미로공원이다."
+            }
+            if (img.id == "2") {
+                p.innerHTML = "<strong>하도해변</strong><br><a class=none href=http://naver.me/xXrDQG6b target=_blank>주소 : 제주시 구좌읍 해맞이해안로</a><br>하도해변은 찾는 관광객이 많지 않아 물이 깨끗하고 전망도 좋다. 바다낚시와 야영도 함께 즐길 수 있고, 야외 웨딩 촬영으로도 많이 방문한다."
+            }
+            if (img.id == "3") {
+                p.innerHTML = "<strong>레일바이크</strong><br><a class=none href=http://naver.me/GlVm5x9c target=_blank>주소 : 제주시 구좌읍 용눈이오름로 641</a><br>바이크를 타면서 구좌읍 주변의 오름과 우도, 성산일출봉 등을 조망할 수 있을 뿐 아니라, 목장이 함께 운영되고 있어 방목된 동물들을 감상할 수 있다."
+            }
+            if (img.id == "4") {
+                p.innerHTML = "<strong>안녕하샌</strong><br><a class=none href=http://naver.me/GttJPmNU target=_blank>주소 : 제주시 구좌읍 월정3길 53-15</a><br>월정리해변 앞 조그만 골목에 위치한 카페다. 좋은 음악이 흐르는 작은 내부공간과 조용한 루프탑이 있다. 맛있는 샌드류와 흑돼지스튜, 향긋한 커피와 맥주 등 여러 메뉴를 즐길 수 있다."
+            }
+        }
+        function f() {
+            var foot = document.getElementById("nofoot")
+            foot.setAttribute("id", "foot")
+        }
+    </script>
+</head>
+
+<body onload="f()">
+    <ul>
+        <li><a class="active" href="team.html">
+                <img src="media/로고.jpg" height="75px" width="75px"></a></li>
+        <li><a href="team.html">제주의 풍경</a></li>
+        <li><a href="team.html#textBox">제주지도</a></li>
+        <li><a href="team.html#festa">축제와 행사</a></li>
+    </ul>
+    <span id="bimg">
+        <img src="media/구좌/미로.jpg">
+    </span>
+    <table align="right">
+        <tr>
+            <td colspan="2" style="vertical-align:top; font-size: 3em;">
+                <strong>구좌읍</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><img id="1" src="media/구좌/미로.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="1" src="media/구좌/미로2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="2" src="media/구좌/하도1.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="2" src="media/구좌/하도2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="3" src="media/구좌/레바.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="3" src="media/구좌/레바2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="4" src="media/구좌/안녕.png" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="4" src="media/구좌/안녕2.png" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+    </table>
+    <p id="info">
+        <strong>김녕미로공원</strong><br><a class=none href=http://naver.me/5xlnleY8 target=_blank>주소 : 제주시 구좌읍 만장굴길
+            122</a><br>김녕미로공원은 사계절 푸르름을 유지하는 상록수 랠란디가 수벽을 이루고 있는 우리나라 최초의 미로공원이다.
+    </p>
+    <span id="no"></span>
+    <div style="height: 40px;"></div>
+    <div id="nofoot">
+        <p style="text-align: center;"><b>사진 출처</b></p>
+        <div>
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500005">[김녕미로공원]
+                https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500005</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500677">[하도해변]
+                https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500677</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://m.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020139">[레일바이크]
+                https://m.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020139</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://m.blog.naver.com/conomicandle/222311546102">[안녕하샌]
+                https://m.blog.naver.com/conomicandle/222311546102</a><br><br>
+        </div>
+    </div>
+</body>
+
+</html>

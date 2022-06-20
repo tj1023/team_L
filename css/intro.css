@@ -1,0 +1,105 @@
+body {
+    background-color: #f6f6f6;
+}
+
+span {
+    position: relative;
+    margin-top: 30px;
+    left: 15%;
+}
+
+span img {
+    display: inline-block;
+    width: 40%;
+    padding-top: 20px;
+}
+
+table {
+    display: inline-block;
+    width: 28%;
+    height: 900px;
+    margin-right: 20px;
+    overflow: scroll;
+    background-color: #e5f6f2;
+}
+
+body>p {
+    width: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid black;
+    font-size: 1.4em;
+    background-color: #e5f6f2;
+}
+
+tr>td {
+    border: 2px solid gray;
+}
+
+td > strong {
+    color: rgb(0, 57, 57);
+}
+
+#nofoot {
+    color: #fff;
+    z-index: -99999;
+}
+
+#nofoot a {
+    color: #fff;
+    z-index: -99999;
+}
+
+#foot {
+    width: 100%;
+    height: 15%;
+    border-top: 2px solid #848484;
+    background-color: #eaeaea;
+    text-align: left;
+    margin-top: 30px;
+    float: left;
+}
+
+#foot a {
+    color: black;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 3px;
+}
+
+.none {
+    text-decoration: none;
+    color: rgb(138, 177, 162);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    position: fixed;
+    top: 28px;
+    left: 42px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    
+    text-decoration: none;
+}
+li a.active {
+    background-color: teal;
+    color: white;
+}
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/intro.css" type="text/css" rel="stylesheet">
+    <title>성산읍 소개</title>
+    <script>
+        var bimg
+        var count = 0
+        function img_click(img) {   //이미지 클릭시 크게 띄움
+            bimg = document.createElement("img")
+            bimg.src = img.src
+            bimg.style = "display: inline-block; width: 40%; padding-top: 20px"
+            var span = document.getElementById("bimg")
+            if (count == 0) { var child = span.childNodes[1] }
+            else { var child = span.childNodes[2] }
+            span.removeChild(child)
+            span.appendChild(bimg)
+            count++
+            var p = document.getElementById("info")     //장소별 소개
+            if (img.id == "1") {
+                p.innerHTML = "<strong>성산일출봉</strong><br><a class=none href=http://naver.me/GEAuu260 target=_blank>주소 : 서귀포시 성산읍 일출로 284-12</a><br>성산일출봉은 유네스코에도 등재된 제주도의 명소이다. 빼어난 경관과 일출봉이라는 이름에 걸맞는 아름다운 일출 풍경으로 유명하다."
+            }
+            if (img.id == "2") {
+                p.innerHTML = "<strong>섭지코지</strong><br><a class=none href=http://naver.me/xL1EUa2M target=_blank>주소 : 서귀포시 성산읍 섭지코지로 107</a><br>섭지코지는 성산 일출봉을 배경으로한 해안 풍경이 일품이다. 들머리의 신양해변백사장, 끝머리 언덕위 평원에 드리워진 유채밭 등은 전형적인 제주의 아름다움을 만날 수 있다. "
+            }
+            if (img.id == "3") {
+                p.innerHTML = "<strong>아쿠아플라넷 제주</strong><br><a class=none href=http://naver.me/GDc5XdDe target=_blank>주소 : 서귀포시 성산읍 섭지코지로 95</a><br>아쿠아플라넷 제주는 아시아 최대 규모를 자랑하는 아쿠아리움이다. 제주의 앞 바다를 재현한 초대형 수조 '제주의 바다'를 비롯해 ‘해양과학 체험관’ 등의 다양한 컨텐츠를 접할 수 있다."
+            }
+            if (img.id == "4") {
+                p.innerHTML = "<strong>일출랜드</strong><br><a class=none href=http://naver.me/FuVEs41s target=_blank>주소 : 서귀포시 성산읍 중산간동로 4150-30</a><br>일출랜드는 미천굴을 중심으로 수변공원, 민속촌, 선인장온실, 아열대산책로, 제주현무암/야생화분재정원, 아트센터, 잔디광장, 조각의 거리 등 다양한 테마로 조성되어 있다."
+            }
+        }
+        function f(){
+            var foot = document.getElementById("nofoot")
+            foot.setAttribute("id", "foot")
+        }
+    </script>
+</head>
+
+<body onload="f()">
+    <ul>
+        <li><a class="active" href="team.html">
+                <img src="media/로고.jpg" height="75px" width="75px"></a></li>
+        <li><a href="team.html">제주의 풍경</a></li>
+        <li><a href="team.html#textBox">제주지도</a></li>
+        <li><a href="team.html#festa">축제와 행사</a></li>
+    </ul>
+    <span id="bimg">
+        <img src="media/성산/성산일출봉1.jpg">
+    </span>
+    <table align="right">
+        <tr>
+            <td colspan="2" style="vertical-align:top; font-size: 3em;">
+                <strong>성산읍</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><img id="1" src="media/성산/성산일출봉1.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="1" src="media/성산/성산일출봉2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="2" src="media/성산/섭지코지.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="2" src="media/성산/섭지코지2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="3" src="media/성산/아플.png" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="3" src="media/성산/아플2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="4" src="media/성산/일출랜드.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="4" src="media/성산/일출랜드2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+    </table>
+    <p id="info">
+        <strong>성산일출봉</strong><br><a class=none href=http://naver.me/GEAuu260 target=_blank>주소 : 서귀포시 성산읍 일출로
+            284-12</a><br>성산일출봉은 유네스코에도 등재된 제주도의 명소이다. 빼어난 경관과 일출봉이라는 이름에 걸맞는 아름다운 일출 풍경으로 유명하다.
+    </p>
+    <span id="no"></span>
+    <div style="height: 40px;"></div>
+    <div id="nofoot">
+        <p style="text-align: center;"><b>사진 출처</b></p>
+        <div>
+            <a href="https://kr.hotels.com/go/south-korea/jeju-seongsan-ilchulbong">[성산일출봉]
+                https://kr.hotels.com/go/south-korea/jeju-seongsan-ilchulbong</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500343">[섭지코지]
+                https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500343</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500565">[아쿠아플라넷]
+                https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500565</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500514">[일출랜드]
+                https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500514</a><br><br>
+        </div>
+    </div>
+</body>
+
+</html>

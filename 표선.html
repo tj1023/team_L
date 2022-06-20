@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/intro.css" type="text/css" rel="stylesheet">
+    <title>표선면 소개</title>
+    <script>
+        var bimg
+        var count = 0
+        function img_click(img) {   //이미지 클릭시 크게 띄움
+            bimg = document.createElement("img")
+            bimg.src = img.src
+            bimg.style = "display: inline-block; width: 40%; padding-top: 20px"
+            var span = document.getElementById("bimg")
+            if (count != 0) {
+                var child = span.childNodes[0]
+                span.removeChild(child)
+            }
+            span.appendChild(bimg)
+            count++
+            var p = document.getElementById("info")     //장소별 소개
+            if (img.id == "1") {
+                p.innerHTML = "<strong>허브동산</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/11656926?c=14116524.2139115,3939162.9678116,15,0,0,0,dh'>서귀포시 표선면 돈오름로 170</a><br>약 150종의 허브가 자라있는 정원과 감귤농장 등 다양한 형태의 테마공원이 조성되어 있어 데이트 코스나 가족여행 등으로 좋다."
+            }
+            if (img.id == "2") {
+                p.innerHTML = "<strong>제주민속촌</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/11590712?c=14119495.5092319,3938140.0192093,15,0,0,0,dh'>서귀포시 표선면 민속해안로 631-34</a><br>제주의 문화유산을 보존하기 위한 박물관이라 할 수 있다. 산촌, 중간산촌, 어촌 등을 전문가의 고증을 통해 구성해놓아 옛날 제주의 모습을 관광할 수 있다."
+            }
+            if (img.id == "3") {
+                p.innerHTML = "<strong>표선해수욕장</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/13491363?c=14119514.6227885,3938137.6345395,15,0,0,0,dh'>서귀포시 표선면 표선리</a><br>총 25만 제곱미터에 이르는 넓은 해수욕장이다. 백사장이 아름답고 수심이 높지 않아 해수욕을 즐기기 안성맞춤이다."
+            }
+            if (img.id == "4") {
+                p.innerHTML = "<strong>성읍녹차마을</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/34856943?c=14113762.8114909,3945932.8325817,15,0,0,0,dh'>서귀포시 표선면 중산간동로 4778</a><br>녹차를 키워 생산하는 곳이다. 다원 뿐만 아니라 녹차를 이용한 음식을 판매하는 카페도 같이 운영하고 있어 녹차를 좋아한다면 방문하기 좋다."
+            }
+            var foot = document.getElementById("nofoot")
+            foot.setAttribute("id", "foot")
+        }
+    </script>
+</head>
+
+<body onload="img_click(document.getElementById('1'))">
+    <ul>
+        <li><a class="active" href="team.html">
+            <img src="media/로고.jpg" height="75px" width="75px"></a></li>
+        <li><a href="team.html">제주의 풍경</a></li>
+        <li><a href="team.html#textBox">제주지도</a></li>
+        <li><a href="team.html#festa">축제와 행사</a></li>
+      </ul>
+    <span id="bimg"></span>
+    <table align="right">
+        <tr>
+            <td colspan="2" style="vertical-align:top; font-size: 3em;">
+                <strong>표선면</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><img id="1" src="media/표선/허브동산.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="1" src="media/표선/허브동산2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="2" src="media/표선/제주민속촌.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="2" src="media/표선/제주민속촌2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="3" src="media/표선/표선해수욕장.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="3" src="media/표선/표선해수욕장2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="4" src="media/표선/성읍녹차마을.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="4" src="media/표선/성읍녹차마을2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+    </table>
+    <p id="info"></p>
+    <span id="no"></span>
+    <div style="height: 40px;"></div>
+    <div id="nofoot">
+        <p style="text-align: center;"><b>사진 출처</b></p>
+        <div>
+            <a href="http://www.herbdongsan.com/page.php?p=1_1">[제주허브동산]
+                http://www.herbdongsan.com/page.php?p=1_1</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500626#">[제주민속촌]
+                https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500626#</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001196#">[표선해수욕장]
+                https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001196#</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020288#">[성읍녹차마을]
+                https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020288#</a><br><br>
+        </div>
+    </div>
+</body>
+
+</html>

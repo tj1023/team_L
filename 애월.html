@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/intro.css" type="text/css" rel="stylesheet">
+    <title>애월읍 소개</title>
+    <script>
+        var bimg
+        var count = 0
+        function img_click(img) {   //이미지 클릭시 크게 띄움
+            bimg = document.createElement("img")
+            bimg.src = img.src
+            bimg.style = "display: inline-block; width: 40%; padding-top: 20px"
+            var span = document.getElementById("bimg")
+            if (count == 0) {var child = span.childNodes[1]}
+            else {var child = span.childNodes[2]}
+            span.removeChild(child)
+            span.appendChild(bimg)
+            count++
+            var p = document.getElementById("info")
+            if (img.id == "saebyeol") {
+                p.innerHTML = "<strong>새별오름</strong><br><a class=none href=http://naver.me/52lh9pLE target=_blank>주소 : 제주시 애월읍 봉성리 산 59-8</a><br>애월에 위치한 제주 대표 오름중 하나로서 불을 주제로 산(새별오름) 전체를 태우는 세계에서 유일한 축제인 들불축제로 유명하다."
+            }
+            if (img.id == "cafe") {
+                p.innerHTML = "<strong>애월카페거리</strong><br><a class=none href=http://naver.me/5JJQcHtp target=_blank>주소 : 제주시 애월읍 애월북서길 56-1</a><br>애월 카페거리는 바닷가 바로 옆에 위치하여 제주 바다의 아름다운 풍경을 볼 수 있어 볼거리도 많고 먹거리도 많은 관광명소이다."
+            }
+            if (img.id == "nolman") {
+                p.innerHTML = "<strong>놀맨</strong><br><a class=none href=http://naver.me/F36oessc target=_blank>주소 : 제주시 애월읍 애월로1길 24</a><br>놀맨은 애월 카페거리 근처에 위치한 음식점으로 메뉴는 단 한가지 '해물라면'이다.<br>식사 공간이 외부에 있어서 바닷가 풍경을 감상하며 식사를 할 수 있다."
+            }
+            if (img.id == "salmon") {
+                p.innerHTML = "<strong>애월연어</strong><br><a class=none href=http://naver.me/xQONgqYX target=_blank>주소 : 제주 제주시 애월읍 하소로 660</a><br>애월연어는 연어 전문점으로 대표메뉴는 사진에 있는 '스노우 초밥'과 '불땡이 초밥'이다. 연어를 좋아하는 사람이라면 꼭 가보길 추천하는 애월의 맛집이다."
+            }
+        }
+        function f(){
+            var foot = document.getElementById("nofoot")
+            foot.setAttribute("id", "foot")
+        }
+    </script>
+</head>
+
+<body onload="f()">
+    <ul>
+        <li><a class="active" href="team.html">
+                <img src="media/로고.jpg" height="75px" width="75px"></a></li>
+        <li><a href="team.html">제주의 풍경</a></li>
+        <li><a href="team.html#textBox">제주지도</a></li>
+        <li><a href="team.html#festa">축제와 행사</a></li>
+    </ul>
+    <span id="bimg">
+        <img src="media/애월/새별오름.jpg">
+    </span>
+    <table align="right">
+        <tr>
+            <td colspan="2" style="vertical-align:top; font-size: 3em;">
+                <strong>애월읍</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><img id="saebyeol" src="media/애월/새별오름.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="saebyeol" src="media/애월/나홀로나무.png" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="cafe" src="media/애월/카페거리.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="cafe" src="media/애월/카페거리2.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="nolman" src="media/애월/놀맨.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="nolman" src="media/애월/꽃게라면.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="salmon" src="media/애월/애월연어.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="salmon" src="media/애월/애월연어2.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+    </table>
+    <p id="info">
+        <strong>새별오름</strong><br><a class=none href=http://naver.me/52lh9pLE target=_blank>주소 : 제주시 애월읍 봉성리 산 59-8</a><br>애월에 위치한 제주 대표 오름중 하나로서 불을 주제로 산(새별오름) 전체를 태우는 세계에서 유일한 축제인 들불축제로 유명하다.
+    </p>
+    <span id="no"></span>
+    <div style="height: 40px;"></div>
+    <div id="nofoot">
+        <p style="text-align: center;"><b>사진 출처</b></p>
+        <div>
+            <a href="https://youtu.be/X6OqYQZkhys">[애월카페거리1] https://youtu.be/X6OqYQZkhys</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://almenge.tistory.com/m/551">[애월카페거리2] https://almenge.tistory.com/m/551</a><br><br>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link href="css/intro.css" type="text/css" rel="stylesheet">
+  <title>서귀포시 소개</title>
+  <script>
+    var bimg
+    var count = 0
+    function img_click(img) {   //이미지 클릭시 크게 띄움
+      bimg = document.createElement("img")
+      bimg.src = img.src
+      bimg.style = "display: inline-block; width: 40%; padding-top: 20px"
+      var span = document.getElementById("bimg")
+      if (count != 0) {
+        var child = span.childNodes[0]
+        span.removeChild(child)
+      }
+      span.appendChild(bimg)
+      count++
+      var p = document.getElementById("info")     //장소별 소개
+      if (img.id == "1") {
+        p.innerHTML = "<strong>서귀포감귤박물관</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/11621632?c=14093814.7928867,3931294.1039997,16,0,0,0,dh'>서귀포시 효돈순환로 441</a><br>제주의 특산물인 감귤을 소재로 한 박물관이다. 제주도의 감귤 뿐만이 아닌 세계 각국의 감귤나무도 소개하고 있어 감귤에 대해 상세히 알아갈 수 있다."
+      }
+      if (img.id == "2") {
+        p.innerHTML = "<strong>새연교</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/17052534?c=14088253.7720644,3926996.2864974,16,0,0,0,dh'>서귀포시 서홍동 707-4</a><br>새로운 연을 만드는 다리라는 뜻의 새연교는 서귀포항과 새섬을 연결하고 있다. 주변엔 산책로가 있어 관광하기 좋다"
+      }
+      if (img.id == "3") {
+        p.innerHTML = "<strong>서귀포 잠수함</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/11607865?c=14088253.7720644,3926996.2864974,16,0,0,0,dh'>서귀포시 남성중로 40</a><br>국내 관광잠수함 중 유일하게 해저 10m ~ 45m까지 해양생태계를 관람할 수 있어 새로운 경험을 하기 좋다"
+      }
+      if (img.id == "4") {
+        p.innerHTML = "<strong>범섬</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/12226234?c=14083509.7027211,3924336.5180256,16,0,0,0,dh'>서귀포시 법환동</a><br>서귀포항에서 남쪽 5km 정도에 위치한 섬으로 서식하는 어류가 다양해 낚시를 즐기기 좋다"
+      }
+      var foot = document.getElementById("nofoot")
+      foot.setAttribute("id", "foot")
+    }
+  </script>
+</head>
+
+<body onload="img_click(document.getElementById('1'))">
+  <ul>
+    <li><a class="active" href="team.html">
+        <img src="media/로고.jpg" height="75px" width="75px"></a></li>
+    <li><a href="team.html">제주의 풍경</a></li>
+    <li><a href="team.html#textBox">제주지도</a></li>
+    <li><a href="team.html#festa">축제와 행사</a></li>
+  </ul>
+  <span id="bimg"></span>
+  <table align="right">
+    <tr>
+      <td colspan="2" style="vertical-align:top; font-size: 3em;">
+        <strong>서귀포시</strong>
+      </td>
+    </tr>
+    <tr>
+      <td><img id="1" src="media/서귀포/감귤.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+      <td><img id="1" src="media/서귀포/감귤2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+    </tr>
+    <tr>
+      <td><img id="2" src="media/서귀포/새연교.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+      <td><img id="2" src="media/서귀포/새연교2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+    </tr>
+    <tr>
+      <td><img id="3" src="media/서귀포/잠수함.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+      <td><img id="3" src="media/서귀포/잠수함2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+    </tr>
+    <tr>
+      <td><img id="4" src="media/서귀포/범섬.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+      <td><img id="4" src="media/서귀포/범섬2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+    </tr>
+  </table>
+  <p id="info"></p>
+  <span id="no"></span>
+  <div style="height: 40px;"></div>
+  <div id="nofoot">
+    <p style="text-align: center;"><b>사진 출처</b></p>
+    <div>
+      <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500019#">[서귀포감귤박물관]
+        https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500019#</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500312#">[새연교]
+        https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500312#</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500329#">[서귀포 잠수함]
+        https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500329#</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500237#">[범섬]
+        https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500237#</a><br><br>
+    </div>
+  </div>
+</body>
+
+</html>

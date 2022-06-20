@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link href="css/intro.css" type="text/css" rel="stylesheet">
+  <title>남원읍 소개</title>
+  <script>
+    var bimg
+    var count = 0
+    function img_click(img) {   //이미지 클릭시 크게 띄움
+      bimg = document.createElement("img")
+      bimg.src = img.src
+      bimg.style = "display: inline-block; width: 40%; padding-top: 20px"
+      var span = document.getElementById("bimg")
+      if (count != 0) {
+        var child = span.childNodes[0]
+        span.removeChild(child)
+      }
+      span.appendChild(bimg)
+      count++
+      var p = document.getElementById("info")     //장소별 소개
+      if (img.id == "1") {
+        p.innerHTML = "<strong>남원큰엉해변</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/1236648631?c=14105880.7681536,3931948.2022394,16,0,0,0,dh'>서귀포시 남원읍 태위로 522-17</a><br>남원에 있는 해변이다. 기이하게 생긴 절벽을 감상할 수 있다. 또한 절벽 위는 잔디가 깔려있어 조용히 쉬기 위한 휴식처로 나쁘지 않다"
+      }
+      if (img.id == "2") {
+        p.innerHTML = "<strong>가뫼물</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/31950231?c=14103177.7416740,3933875.0807164,16,0,0,0,dh'>서귀포시 남원읍 남위남성로 168</a><br>가뫼물은 제주농촌생태체험농장이라 할 수 있다. 겨울이 아니라도 나무에 열린 감귤을 볼 수 있는 관광지이다"
+      }
+      if (img.id == "3") {
+        p.innerHTML = "<strong>사라오름</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/17075242?c=14089572.5406760,3944776.8545697,16,0,0,0,dh'>서귀포시 남원읍 신례리 산 2-1</a><br>제주도의 오름들 중 하나로 분화구에 물이 고여있다는 특징이 있다. 여름과 겨울의 분위기가 확 달라져 색다르게 즐길 수 있다."
+      }
+      if (img.id == "4") {
+        p.innerHTML = "<strong>태흥포구</strong><br>주소 : <a class=none href='https://map.naver.com/v5/entry/place/17070799?c=14109552.5413699,3933495.3444508,16,0,0,0,dh'>서귀포시 남원읍 태흥리</a><br>탁 트인 바다 풍경을 감상할 수 있는 포구이다. 바다를 따라 걸을 수 있는 산책로가 구성되어 있어 경치를 구경하면서 걷기 좋다."
+      }
+      var foot = document.getElementById("nofoot")
+      foot.setAttribute("id", "foot")
+    }
+  </script>
+</head>
+
+<body onload="img_click(document.getElementById('1'))">
+  <ul>
+    <li><a class="active" href="team.html">
+        <img src="media/로고.jpg" height="75px" width="75px"></a></li>
+    <li><a href="team.html">제주의 풍경</a></li>
+    <li><a href="team.html#textBox">제주지도</a></li>
+    <li><a href="team.html#festa">축제와 행사</a></li>
+  </ul>
+  <span id="bimg"></span>
+  <table align="right">
+    <tr>
+      <td colspan="2" style="vertical-align:top; font-size: 3em;">
+        <strong>남원읍</strong>
+      </td>
+    </tr>
+    <tr>
+      <td><img id="1" src="media/남원/남원큰엉해변.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+      <td><img id="1" src="media/남원/남원큰엉해변2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+    </tr>
+    <tr>
+      <td><img id="2" src="media/남원/가뫼물.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+      <td><img id="2" src="media/남원/가뫼물2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+    </tr>
+    <tr>
+      <td><img id="3" src="media/남원/사라오름.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+      <td><img id="3" src="media/남원/사라오름2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+    </tr>
+    <tr>
+      <td><img id="4" src="media/남원/태흥포구.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+      <td><img id="4" src="media/남원/태흥포구2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+    </tr>
+  </table>
+  <p id="info"></p>
+  <span id="no"></span>
+  <div style="height: 40px;"></div>
+  <div id="nofoot">
+    <p style="text-align: center;"><b>사진 출처</b></p>
+    <div>
+      <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019750#">[남원큰엉해변]
+        https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019750#</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500626#">[가뫼물]
+        https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500626#</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500278#">[사라오름]
+        https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500278#</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020989#">[태흥포구]
+        https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020989#</a><br><br>
+    </div>
+  </div>
+</body>
+
+</html>

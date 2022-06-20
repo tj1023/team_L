@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>중문 소개</title>
+    <link href="css/intro.css" type="text/css" rel="stylesheet">
+    <script>
+        var bimg
+        var count = 0
+        function img_click(img) {   //이미지 클릭시 크게 띄움
+            bimg = document.createElement("img")
+            bimg.src = img.src
+            bimg.style = "display: inline-block; width: 40%; padding-top: 20px"
+            var span = document.getElementById("bimg")
+            if (count == 0) {var child = span.childNodes[1]}
+            else {var child = span.childNodes[2]}
+            span.removeChild(child)
+            span.appendChild(bimg)
+            count++
+            var p = document.getElementById("info")     //장소별 소개
+            if (img.id == "1") {
+                p.innerHTML = "<strong>대포 해안 주상절리대</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/5Q4ukeRc target=_blank> 주소 : 제주 서귀포시 이어도로 36-24</a><br>"
+                p.innerHTML += "중문·대포해안 주상절리대는 높이가 30~40m, 폭이 약 1㎞ 정도로 우리나라 최대 규모를 자랑하며, 제주도 천연기념물 제443호로 지정되어 있다."
+            } if (img.id == "2") {
+                p.innerHTML = "<strong>중문 색달 해수욕장</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/FmgVWH1c target=_blank>주소 : 제주 서귀포시 색달동</a><br>아름다운 해안 풍경과 야자수의 이국적인 모습으로 중문관광단지에서 시작해 천제연폭포와 대포주상절리와 이어지는 곳에 위치되어 있고 모래가 흑색, 회색, 적색, 백색 4가지가 섞여 있어 해가 비추는 방향에 따라 모래 해변의 색깔이 달라 보인다."
+            } if (img.id == "3") {
+                p.innerHTML = "<strong>쉬리의 언덕</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/5kLXLj4o target=_blank>주소 : 제주 서귀포시 색달동 3039-41</a><br>영화 ‘쉬리’의 마지막 장면에서 두 주인공이 바다가 보이는 언덕 위 벤치에 앉아 지난날을 회상하며 끝을 맺던 장소로 영화 촬영지로 유명해지고 많은 사람이 찾아오면서 쉬리의 언덕이라는 이름이 붙여졌다."
+            } if (img.id == "4") {
+                p.innerHTML = "<strong>제주 제트</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/FeOCBkGl target=_blank>주소 : 제주 서귀포시 대포로 172-5 제주제트</a><br>주상절리 앞바다에서 즐길 수 있는 해상 레포츠<br>배낚시와 제트보트, 파라세일링 체험을 할 수 있다."
+            } if (img.id == "5") {
+                p.innerHTML = "<strong>박물관은 살아있다 제주 중문점</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/5lZC5TJQ target=_blank>주소 : 제주 서귀포시 중문관광로 42</a><br>착시아트, 미디어아트, 오브제아트, 스컬쳐아트, 블래원더랜드 EP2 등 5가지 테마로 이루어져 있으며, 내가 주인공이 되어 직접 보고, 듣고, 만지고, 참여하는 오감만족형 박물관"
+            } if (img.id == "6") {
+                p.innerHTML = "<strong>얼라이브 카트</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/G99sZMQV target=_blank>주소 : 제주 서귀포시 중문관광로 42</a><br>짜릿한 속도감을 느낄 수 있는 카트레이싱 체험 <br>박물관은 살아있다 바로 옆에 위치하고 있다."
+            } if (img.id == "7") {
+                p.innerHTML = "<strong>중문 오프로드 체험장</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/FhAdAUS2 target=_blank>주소 : 제주 서귀포시 상예로 349 중문오프로드체험장</a><br>제주의 초원과 오름을 달리는 짜릿한 액티비티 <br>산악오토바이 랭글러 버기카을 직접 운전할 수 있는 체험"
+            } if (img.id == "8") {
+                p.innerHTML = "<strong>만달</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/Gd6eOecc target=_blank>주소 : 제주 서귀포시 일주서로 710 1층</a><br>제주 작가분들이 손으로 직접 만든핸드메이드 제품과 제주 감성이 가득한 소품들을 판매하는 제주도 여행 기념품샵"
+            }
+        }
+        function f(){
+            var foot = document.getElementById("nofoot")
+            foot.setAttribute("id", "foot")
+        }
+    </script>
+</head>
+
+<body onload="f()">
+    <ul>
+        <li><a class="active" href="team.html">
+                <img src="media/로고.jpg" height="75px" width="75px"></a></li>
+        <li><a href="team.html">제주의 풍경</a></li>
+        <li><a href="team.html#textBox">제주지도</a></li>
+        <li><a href="team.html#festa">축제와 행사</a></li>
+    </ul>
+    <span id="bimg">
+        <img src="media/중문/주상절리대.png">
+    </span>
+    <table align="right">
+        <tr>
+            <td colspan="2" style="vertical-align:top; font-size: 3em;">
+                <strong>중문</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><img id="1" src="media/중문/주상절리대.png" alt="주상절리대" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="2" src="media/중문/색달해수욕장.jpeg" alt="색달해수욕장" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="3" src="media/중문/쉬리의언덕.jpg" alt="쉬리의언덕" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="4" src="media/중문/제주제트.jpeg" alt="제주제트" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="5" src="media/중문/박물관은살아있다.jpg" alt="박물관은살아있다" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="6" src="media/중문/얼라이브카트.jpg" alt="얼라이브카트" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="7" src="media/중문/오프로드체험.jpeg" alt="오프로드체험" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="8" src="media/중문/만달.jpeg" alt="만달" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+    </table>
+    <p id="info">
+        <strong>대포 해안 주상절리대</strong><br><a class=none href=http://naver.me/5Q4ukeRc target=_blank> 주소 : 제주 서귀포시 이어도로 36-24</a><br>중문·대포해안 주상절리대는 높이가 30~40m, 폭이 약 1㎞ 정도로 우리나라 최대 규모를 자랑하며, 제주도 천연기념물 제443호로 지정되어 있다.
+    </p>
+    <span id="no"></span>
+    <div style="height: 40px;"></div>
+    <footer id="nofoot">
+        <p style="text-align: center;"><b>사진 출처</b></p>
+        <div>
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020476">[주상절리대] https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020476</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://map.naver.com/v5/entry/place/11491786?c=14072063.3651359,3927892.5768548,13,0,0,0,dh&placePath=%2Fphoto&entry=plts">[색달해수욕장] https://map.naver.com/v5/entry/place/11491786?c=14072063.3651359,3927892.5768548,13,0,0,0,dh&placePath=%2Fphoto&entry=plts</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500390">[쉬리의언덕] https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500390</a><br>
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500216">[박물관은살아있다] https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500216</a>
+            &nbsp;&nbsp;
+            <a href="https://map.naver.com/v5/search/%EC%A0%9C%EC%A3%BC%EC%A0%9C%ED%8A%B8/place/16929045?c=14074714.3608855,3926999.0814744,15,0,0,0,dh&entry=plt&placePath=%3Fentry%253Dbmp">[제주제트] https://map.naver.com/v5/search/%EC%A0%9C%EC%A3%BC%EC%A0%9C%ED%8A%B8/place/16929045?c=14074714.3608855,3926999.0814744,15,0,0,0,dh&entry=plt&placePath=%3Fentry%253Dbmp</a>
+            &nbsp;&nbsp;
+            <a href="http://www.alivekart.co.kr/page.php?p=1_1">[얼라이브카트] http://www.alivekart.co.kr/page.php?p=1_1</a><br>
+            <a href="https://map.naver.com/v5/entry/place/1277785372?c=14069966.3063044,3931930.7195520,15,0,0,0,dh">[오프로드체험] https://map.naver.com/v5/entry/place/1277785372?c=14069966.3063044,3931930.7195520,15,0,0,0,dh</a>
+            &nbsp;&nbsp;
+            <a href="https://map.naver.com/v5/search/%EB%A7%8C%EB%8B%AC/place/1523455559?c=14074129.0652668,3929369.9961591,15,0,0,0,dh&placePath=%3Fentry%253Dbmp">[만달] https://map.naver.com/v5/search/%EB%A7%8C%EB%8B%AC/place/1523455559?c=14074129.0652668,3929369.9961591,15,0,0,0,dh&placePath=%3Fentry%253Dbmp</a>
+
+        </div>
+    </footer>
+</body>
+
+</html>

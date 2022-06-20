@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>한경면 한림읍 소개</title>
+    <link href="css/intro.css" type="text/css" rel="stylesheet">
+    <script>
+        var bimg
+        var count = 0
+        function img_click(img) {   //이미지 클릭시 크게 띄움
+            bimg = document.createElement("img")
+            bimg.src = img.src
+            bimg.style = "display: inline-block; width: 40%; padding-top: 20px"
+            var span = document.getElementById("bimg")
+            if (count == 0) {var child = span.childNodes[1]}
+            else {var child = span.childNodes[2]}
+            span.removeChild(child)
+            span.appendChild(bimg)
+            count++
+            var p = document.getElementById("info")     //장소별 소개
+            if (img.id == "1") {
+                p.innerHTML = "<strong>제주 유리의성</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/5EQ3IFqm target=_blank> 주소 : 제주 제주시 한경면 녹차분재로 462</a><br>"
+                p.innerHTML += "제주의 자연과 유리가 조화를 이뤄 설계한 유리정원, 제주 돌담을 형상화한 유리돌담, <br>유리의 성이 자랑하는 호수 위 유리카페 등 세계적인 유리테마파크 유리의성"
+            } if (img.id == "2") {
+                p.innerHTML = "<strong>낙천 아홉굿마을</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/5Q4irZbE target=_blank>주소 : 제주 제주시 한경면 낙수로 97</a><br>하늘에서 천 가지의 기쁨을 내렸다는 낙천리 마을과 그곳에 위치한 <br>아홉굿마을은 올레길 13코스의 중간지점에 있다. 9개의 샘이 있다 하여 아홉굿마을로 불린다."
+            } if (img.id == "3") {
+                p.innerHTML = "<strong>생각하는 정원</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/FiLOHTWx target=_blank>주소 : 제주 제주시 한경면 녹차분재로 675 생각하는정원</a><br>세계에서 가장 아름다운 정원’이라는 수식어와 함께 창조와 예술, 철학이 융합된 정원으로 <br>국제적 탐구의 대상이 되고 있다."
+            } if (img.id == "4") {
+                p.innerHTML = "<strong>산양큰엉곶</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/GA1Tyglt target=_blank>주소 : 제주 제주시 한경면 청수리 956-6</a><br>달구지길(포토존 및 체험학습)과 숲길탐방로로 나뉘어져 있으며 옛것을 토대로 소와 말이 달구지를 끌고가는 모습도 직접 볼수 있다. 동화속 '숲속의 작은마을'을 재구현한 산양큰엉곶"
+            } if (img.id == "5") {
+                p.innerHTML = "<strong>한림공원</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/58HF0EFI target=_blank>주소 : 제주 제주시 한림읍 한림로 300</a><br>아열대 식물원, 분재원, 민속마을, 야자수길, 동굴, 조류사파리, 연못정원, 수석전시관, 야외 산책 오솔길 등 9개 테마로 이루어진 테마 파크"
+            } if (img.id == "6") {
+                p.innerHTML = "<strong>쌍용동굴</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/GvkfTnym target=_blank>주소 : 제주 제주시 한림읍 협재리</a><br>황금굴, 소천굴, 만장굴과 더불어 제주도의 대표적인 용암동굴"
+            } if (img.id == "7") {
+                p.innerHTML = "<strong>제주성서식물원 비블리아</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/xVl3EPAy target=_blank>주소 : 제주 제주시 한림읍 조성로 17</a><br>아름다운 식물과 생명의 말씀이 있는 힐링의 식물 낙원, 제주 성서식물원, 농촌교육농장"
+            } if (img.id == "8") {
+                p.innerHTML = "<strong>액티브파크</strong><br>"
+                p.innerHTML += "<a class=none href=http://naver.me/GDc52VJp target=_blank>주소 : 제주 제주시 한림읍 금능남로 76 액티브파크 제주</a><br>다채로운 1인용 등반 챌린지를 개발하여 남녀노소 쉽게 즐길 수 있는 등반 놀이시설 클립앤클라임과 짜릿한 질주를 느낄 수 있는 카트체험, 어린이들을 위한 키즈카페가 있다."
+            }
+        }
+        function f(){
+            var foot = document.getElementById("nofoot")
+            foot.setAttribute("id", "foot")
+        }
+    </script>
+</head>
+
+<body onload="f()">
+    <ul>
+        <li><a class="active" href="team.html">
+                <img src="media/로고.jpg" height="75px" width="75px"></a></li>
+        <li><a href="team.html">제주의 풍경</a></li>
+        <li><a href="team.html#textBox">제주지도</a></li>
+        <li><a href="team.html#festa">축제와 행사</a></li>
+    </ul>
+    <span id="bimg">
+        <img src="media/한경한림/제주유리의성.jpg">
+    </span>
+    <table align="right">
+        <tr>
+            <td colspan="2" style="vertical-align:top; font-size: 2.5em;">
+                <strong>한경면</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><img id="1" src="media/한경한림/제주유리의성.jpg" alt="제주유리의성" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="2" src="media/한경한림/아홉굿마을.jpg" alt="아홉굿마을" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="3" src="media/한경한림/생각하는정원.jpg" alt="생각하는정원" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="4" src="media/한경한림/산양큰엉곶.jpg" alt="산양큰엉곶" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="vertical-align:top; font-size: 2.5em;">
+                <strong>한림읍</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><img id="5" src="media/한경한림/한림공원.jpg" alt="한림공원" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="6" src="media/한경한림/쌍용동굴.jpg" alt="쌍용동굴" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="7" src="media/한경한림/제주성서식물원.jpg" alt="제주성서식물원" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="8" src="media/한경한림/액티브파크.png" alt="액티브파크" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+    </table>
+    <p id="info">
+        <strong>제주 유리의성</strong><br><a class=none href=http://naver.me/5EQ3IFqm target=_blank> 주소 : 제주 제주시 한경면 녹차분재로 462</a><br>제주의 자연과 유리가 조화를 이뤄 설계한 유리정원, 제주 돌담을 형상화한 유리돌담, <br>유리의 성이 자랑하는 호수 위 유리카페 등 세계적인 유리테마파크 유리의성
+    </p>
+    <span id="no"></span>
+    <div style="height: 40px;"></div>
+    <div id="nofoot">
+        <p style="text-align: center;"><b>사진 출처</b></p>
+        <div>
+            <a href="http://www.jejuglasscastle.com/">[제주유리의성] http://www.jejuglasscastle.com/</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.spiritedgarden.com/garden">[생각하는정원] http://www.spiritedgarden.com/garden</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://ninegood.org/%eb%82%99%ec%b2%9c-%ec%95%84%ed%99%89%ea%b5%bf%eb%a7%88%ec%9d%84">[낙천아홉굿마을] http://ninegood.org/%eb%82%99%ec%b2%9c-%ec%95%84%ed%99%89%ea%b5%bf%eb%a7%88%ec%9d%84</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://booking.naver.com/booking/12/bizes/667876/items/4340097">[산양큰엉곶] https://booking.naver.com/booking/12/bizes/667876/items/4340097</a><br>
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500690">[한림공원] https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500690</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500405">[쌍용동굴] https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500405</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="http://www.jejubiblia.com/contact#lg=w20200630ab9ea5f4cbb44&slide=18">[제주성서식물원비블리아] http://www.jejubiblia.com/contact#lg=w20200630ab9ea5f4cbb44&slide=18</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="http://activepark.co.kr/pages.php?p=1_1_1_1">[액티브파크] http://activepark.co.kr/pages.php?p=1_1_1_1</a>
+        </div>
+    </div>
+</body>
+
+</html>

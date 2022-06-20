@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/intro.css" type="text/css" rel="stylesheet">
+    <title>조천읍 소개</title>
+    <script>
+        var bimg
+        var count = 0
+        function img_click(img) {   //이미지 클릭시 크게 띄움
+            bimg = document.createElement("img")
+            bimg.src = img.src
+            bimg.style = "display: inline-block; width: 40%; padding-top: 20px"
+            var span = document.getElementById("bimg")
+            if (count == 0) { var child = span.childNodes[1] }
+            else { var child = span.childNodes[2] }
+            span.removeChild(child)
+            span.appendChild(bimg)
+            count++
+            var p = document.getElementById("info")     //장소별 소개
+            if (img.id == "1") {
+                p.innerHTML = "<strong>스위스마을</strong><br><a class=none href=http://naver.me/58HFHOaN target=_blank>주소 : 제주시 조천읍 함와로 566-27</a><br>스위스마을은 조천읍을 대표하는 관광마을로 여러 상가와 숙박시설로 꾸며져 있으며 다채로운 색감의 건물들이 마을 곳곳에 포토존을 제공한다."
+            }
+            if (img.id == "2") {
+                p.innerHTML = "<strong>카페 말로</strong><br><a class=none href=http://naver.me/GY2cJROM target=_blank>주소 : 제주시 조천읍 남조로 1785-12</a><br>카페 말로는 목장과 카페를 같이 경험할 수 있는 특별한 곳이다. 밖에선 말들이 있는 목장에서 먹이 주기 체험을 할 수 있고 안에서는 말과 관련된 소품들과 함께 카페를 즐길 수 있다."
+            }
+            if (img.id == "3") {
+                p.innerHTML = "<strong>닭머르해안길</strong><br><a class=none href=http://naver.me/IxDHbmIn target=_blank>주소 : 제주시 조천읍 신촌리 2318-2</a><br>닭머르해안길은 닭이 흙을 파헤치고 그 안에 들어앉은 모습을 닮았다하여 이름이 붙여졌다. 일몰 장소로도 손꼽히는 곳이라 한적하게 산책을 즐기며 사진을 담기에도 매우 좋다."
+            }
+            if (img.id == "4") {
+                p.innerHTML = "<strong>함덕해수욕장</strong><br><a class=none href=http://naver.me/Fa3SVxwH target=_blank>주소 : 제주시 조천읍 조함해안로 519-10</a><br>함덕 해수욕장은 제주도에서 가장 바다가 아룸다운 곳 중 하나이다. 물이 맑고 수심이 얕으며 에메랄드 빛을 띄고 있어서 수많은 여행객들이 끊이지 않는다."
+            }
+        }
+        function f() {
+            var foot = document.getElementById("nofoot")
+            foot.setAttribute("id", "foot")
+        }
+    </script>
+</head>
+
+<body onload="f()">
+    <ul>
+        <li><a class="active" href="team.html">
+                <img src="media/로고.jpg" height="75px" width="75px"></a></li>
+        <li><a href="team.html">제주의 풍경</a></li>
+        <li><a href="team.html#textBox">제주지도</a></li>
+        <li><a href="team.html#festa">축제와 행사</a></li>
+    </ul>
+    <span id="bimg">
+        <img src="media/조천/스위스.jpg">
+    </span>
+    <table align="right">
+        <tr>
+            <td colspan="2" style="vertical-align:top; font-size: 3em;">
+                <strong>조천읍</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><img id="1" src="media/조천/스위스.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+            <td><img id="1" src="media/조천/스위스2.jpg" width="250px" height="250px" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="2" src="media/조천/카페말로.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="2" src="media/조천/카페말로2.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="3" src="media/조천/닭머르.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="3" src="media/조천/닭머르2.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+        <tr>
+            <td><img id="4" src="media/조천/함덕.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+            <td><img id="4" src="media/조천/함덕2.jpg" width="100%" height="100%" onclick="img_click(this)"></td>
+        </tr>
+    </table>
+    <p id="info">
+        <strong>스위스마을</strong><br><a class=none href=http://naver.me/58HFHOaN target=_blank>주소 : 제주시 조천읍 함와로
+            566-27</a><br>스위스마을은 조천읍을 대표하는 관광마을로 여러 상가와 숙박시설로 꾸며져 있으며 다채로운 색감의 건물들이 마을 곳곳에 포토존을 제공한다.
+    </p>
+    <span id="no"></span>
+    <div style="height: 40px;"></div>
+    <div id="nofoot">
+        <p style="text-align: center;"><b>사진 출처</b></p>
+        <div>
+            <a href="https://m.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500693">[함덕해수욕장]
+                https://m.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500693</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=0ecea0b9-fc60-4208-ab65-2a0648139786">[그
+                외]
+                https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=0ecea0b9-fc60-4208-ab65-2a0648139786</a><br><br>
+        </div>
+    </div>
+</body>
+
+</html>
