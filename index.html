@@ -82,7 +82,39 @@
         <a class="slide_con" href="checklist.html" target="_blank">떠나기 전에 챙기셨나요?</a>
     </div>
 
-    <script src="js/upslide.js"></script>
+    <script>
+        window.onload = function(){
+            var slideCon = $('.slide_con');
+            var slideTimer;
+            var delayTime = 1500;
+            slideTimer = setInterval(changeSlide, delayTime);
+            var slideIndex = 0;
+            var slideTotal = slideCon.length;
+            var slideH = 300;    
+            for(var i = 0; i < slideTotal; i++) {
+                var tempH = i * slideH;
+                slideCon.eq(i).css('top', tempH);
+            }
+
+            function changeSlide() {
+                $.each(slideCon, function(index, item) {
+                    var tgX = $(this).css('top');
+                    tgX = parseInt(tgX);
+                    tgX = tgX - slideH;
+
+                    if(tgX < -slideH * (slideTotal - 1) ) {
+                        $(this).css('top', slideH);
+                        tgX = 0;
+                    }
+
+                    $(this).stop().animate({
+                        'top': tgX
+                    });
+        
+                });
+            }
+        }
+    </script>
 
     <div>
         <div id="box2"></div>
@@ -100,7 +132,25 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
-    <script src="js/team.js"></script>
+    <script>
+        const pn = ['      ', ' ', ' ', '여','행',' ', '지','역','을', ' ', '선', '택', '하','세','요'];
+        let txtBox = $('#textBox2 > h2');
+
+        $(document).ready(function(){
+            var txt = '';
+            pn.forEach(function(e, i){
+                function ani() {
+                    console.log(e, i)
+                    setTimeout(function() {
+                        txt += e;
+                        console.log(txt)
+                        txtBox.text(txt)
+                    }, i*150);
+                }
+                ani();
+            });
+        })
+    </script>
     <map name="image-map">
         <area target="_self" alt="" title="" href="애월.html" coords="147,170,151,208,158,229,174,235,173,256,227,289,249,296,264,290,272,295,296,296,300,275,327,274,359,277,391,273,397,262,368,242,337,245,307,207,306,165,300,128,277,133,276,116,254,112,238,121,221,121,199,139,193,135,179,142,170,137,168,152" shape="poly">
         <area target="_self" alt="" title="" href="한경,한림.html" coords="8,309,9,326,11,337,4,347,10,361,26,352,73,379,73,368,120,352,140,324,165,317,185,294,220,295,165,257,161,244,148,235,146,220,138,171,118,184,117,212,87,239,72,242,57,261,33,283" shape="poly">
